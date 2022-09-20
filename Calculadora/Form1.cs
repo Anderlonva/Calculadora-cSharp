@@ -12,7 +12,7 @@ namespace Calculadora
 
         }
 
-        int numero1, numero2, resultado;
+        float numero1, numero2, resultado;
         string operacion;
 
         private void button15_Click(object sender, EventArgs e)
@@ -79,12 +79,12 @@ namespace Calculadora
         private void btn_punto_Click(object sender, EventArgs e)
         {
             string num = ".";
-            txtPrincipal.Text = num;
+            txtPrincipal.Text += num;
         }
 
         private void btn_igual_Click(object sender, EventArgs e)
         {
-            numero2 = Int32.Parse(txtPrincipal.Text);
+            numero2 = float.Parse(txtPrincipal.Text);
 
             if (operacion == "sumar")
             {
@@ -112,28 +112,28 @@ namespace Calculadora
 
         private void btn_mas_Click(object sender, EventArgs e)
         {
-            numero1 = Int32.Parse(txtPrincipal.Text);
+            numero1 = float.Parse(txtPrincipal.Text);
             txtPrincipal.Text = "";
             operacion = "sumar";
         }
 
         private void btn_menos_Click(object sender, EventArgs e)
         {
-            numero1 = Int32.Parse(txtPrincipal.Text);
+            numero1 = float.Parse(txtPrincipal.Text);
             txtPrincipal.Text = "";
             operacion = "restar";
         }
 
         private void btn_multiplicar_Click(object sender, EventArgs e)
         {
-            numero1 = Int32.Parse(txtPrincipal.Text);
+            numero1 = float.Parse(txtPrincipal.Text);
             txtPrincipal.Text = "";
             operacion = "multiplicar";
         }
 
         private void btn_division_Click(object sender, EventArgs e)
         {
-            numero1 = Int32.Parse(txtPrincipal.Text);
+            numero1 = float.Parse(txtPrincipal.Text);
             txtPrincipal.Text = "";
             operacion = "dividir";
         }
